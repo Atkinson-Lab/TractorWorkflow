@@ -26,7 +26,7 @@ Tractor currently supports several Local Ancestry Inference (LAI) tools, includi
 
 If the LAI tool you are using generates an `*.msp` file, you can use `extract_tracts.py` to generate the necessary inputs and then run Tractor GWAS. For FLARE, which outputs a VCF file with both ancestry calls and genotypes, we have created a new script, `extract_tracts_flare.py`, to support this process.
 
-If you want to experiment with a new LAI tool, you can run the workflow modularly (one module at a time) and test the tool out. Check [here](https://atkinson-lab.github.io/NextflowWorkflow/docs/docs/documentation/modular_workflow_execution.html) for modular workflow runs.
+If you want to experiment with a new LAI tool, you can run the workflow modularly (one module at a time) and test the tool out. Check [here](https://atkinson-lab.github.io/TractorWorkflow/docs/documentation/modular_workflow_execution.html) for modular workflow runs.
 
 **5. If I want to run additional phenotypes on the same dataset I've previously used with Tractor, do I need to rerun the entire pipeline?**
 

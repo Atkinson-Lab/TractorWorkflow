@@ -17,7 +17,7 @@ The pipeline is designed into three independent modules:
 2. **Module 2: Local Ancestry Inference** (using RFMix2, G-Nomix, FLARE)
 3. **Module 3: Tractor GWAS**
 
-The whole workflow can be run together, as we discussed in [Launching an NXF Workflow](https://atkinson-lab.github.io/TractorWorkflow/docs/docs/documentation/launching_nxf_workflow.html), but these modules can also be run indepdendently or two at a time.
+The whole workflow can be run together, as we discussed in [Launching an NXF Workflow](https://atkinson-lab.github.io/TractorWorkflow/docs/documentation/launching_nxf_workflow.html), but these modules can also be run indepdendently or two at a time.
 
 Here we discuss the scripts to be able to independently run these modules:
 

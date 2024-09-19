@@ -18,12 +18,13 @@ The Tractor Nextflow (NXF) Workflow is designed to simplify this process for use
 **Tractor Nextflow (NXF) Workflow: v0.0.0.TBD.** See the [TBD-CHANGELOG](tbd) for details. -->
 
 {: .new }
-**Tractor GWAS: v1.4.0.** See the [CHANGELOG](https://atkinson-lab.github.io/TractorWorkflow/docs/docs/CHANGELOG.html) for details.
+**Tractor GWAS: v1.4.0.** See the [CHANGELOG](https://atkinson-lab.github.io/TractorWorkflow/docs/CHANGELOG.html) for details.
 
 ## Description
 The goal of creating a Tractor Nextflow (NXF) workflow was threefold:
 * **Lowering the barrier of adoption:** We wanted to streamline the process by simplifying the numerous steps involved while offering support for most commonly used tools for each of the steps.
-* **Enable customization:** We wanted to give users the flexibility to customize the workflow, allowing them to run specific steps via Nextflow based on their needs. We have the split the workflow into <u><b>three modules</b></u> which allows for this. Please see [Documentation](https://atkinson-lab.github.io/TractorWorkflow/docs/docs/documentation/documentation_home.html)
+* **Enable customization:** We wanted to give users the flexibility to customize the workflow, allowing them to run specific steps via Nextflow based on their needs. We have the split the workflow into <u><b>three modules</b></u> which allows for this. Please see [Documentation](https://atkinson-lab.github.io/TractorWorkflow/docs/documentation/documentation_home.html)
+
 * **Tutorial:** We also wanted to provide a clear tutorial of what a Tractor run typically looks like, to guide users through the process
 
 ## Citation

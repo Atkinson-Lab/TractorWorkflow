@@ -24,24 +24,12 @@ Using Nextflow, we have wrapped several necessary steps into one seamless workfl
 - **Dependencies**: Note that its important for users to meet all dependency requirements for Nextflow. For example, Nextflow requires Java v11 or above to be installed. While we've tested our pipeline with **Java v22** and **Nextflow v24.04.4**, we expect recent versions should work just as well. 
 
 
-### 2. Conda and `py3_tractor` Environment
+### 2. Conda
 
 To manage software dependencies efficiently, we strongly recommend using Conda. This allows you to create isolated environments tailored specifically to our software's requirements.
 
 - **Conda Installation**: If you don't already have Conda installed, you can do so by following the steps outlined in the [Anaconda installation guide](https://docs.anaconda.com/anaconda/install/). This installation provides the foundation for managing all the software dependencies needed for our workflow.
 
-- **Setting Up the `py3_tractor` Environment**:
-  - **Step 1**: Clone the Tractor repository from GitHub, which contains all necessary scripts and environment configurations: [Tractor GitHub Repository](https://github.com/Atkinson-Lab/Tractor).
-  - **Step 2**: Use the provided YML file in the Tractor repository to create the `py3_tractor` environment. This file contains all the dependencies required to run the Tractor scripts:
-    ```bash
-    conda env create -f conda_py3_tractor.yml
-    ```
-  - **Step 3**: Activate the newly created environment:
-    ```bash
-    conda activate py3_tractor
-    ```
-
-  By using this environment, you ensure that all the necessary dependencies for running Tractor scripts are properly installed, avoiding potential conflicts with other software on your system.
 
 ### 3. `time` command
 

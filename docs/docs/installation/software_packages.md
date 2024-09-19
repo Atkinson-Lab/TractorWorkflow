@@ -23,7 +23,7 @@ This workflow utilizes SHAPEIT 5 for phasing and requires it to be installed on 
 
 ### SHAPEIT 5 dependencies
 
-- Ensure SHAPEIT 5 dependencies (AVX2, GCC > 4.4, bcftools) and required libraries (HTSLib, Boost, etc.) are installed on your system. More details are available in the [documentation](https://odelaneau.github.io/shapeit5/docs/installation/build_from_source).
+- Ensure SHAPEIT 5 dependencies (AVX2, GCC > 4.4, bcftools) and required libraries (HTSLib, Boost, etc.) are installed on your system. More details are available in the [SHAPEIT5 documentation](https://odelaneau.github.io/shapeit5/docs/installation/build_from_source).
 
 ### Installation Steps
 
@@ -45,8 +45,16 @@ This workflow utilizes SHAPEIT 5 for phasing and requires it to be installed on 
    echo 'export PATH="/path/to/software_downloads/shapeit5/static_bins:$PATH"' >> ~/.bashrc
    source ~/.bashrc
    ```
+   
+3. **Make the binaries executable**  
+   To be able to run shapeit5 from the command line, run:
 
-3. **Verify Installation**  
+   ```bash
+   chmod +x phase_common_static
+   chmod +x ligate_static
+   ```
+   
+4. **Verify Installation**  
    Ensure the tools are correctly installed by running:
 
    ```bash
@@ -62,12 +70,12 @@ This workflow utilizes SHAPEIT 5 for phasing and requires it to be installed on 
    /path/to/software_downloads/shapeit5/static_bins/ligate_static
    ```
 
-4. **Test the Tools**  
+5. **Test the Tools**  
    Confirm that the tools work by running:
 
    ```bash
-   phase_common_static -h
-   ligate_static -h
+   phase_common_static --help
+   ligate_static --help
    ```
 
 ### Alternative Installation Option

@@ -35,7 +35,7 @@ The methodology and utility of Tractor are more fully described in our manuscrip
 -------------------------
 
 ### License
-The Tractor program is licensed under the MIT License. You may obtain a copy of the License [here](https://github.com/Atkinson-Lab/Tractor-New/blob/main/LICENSE).
+The Tractor program is licensed under the MIT License. You may obtain a copy of the License [here](https://github.com/Atkinson-Lab/Tractor/blob/main/LICENSE).
 
 ### Contributing
 If you would like to contribute by making changes or adding functionalities to our Tractor GWAS or Tractor NXF workflow, please reach out to us via email, or some other means to discuss your proposed changes.

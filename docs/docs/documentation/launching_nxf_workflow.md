@@ -331,9 +331,9 @@ workflow_mode="complete"          # Select any of the modes described here: http
 lai_tool="rfmix2"                 # not required if "phasing_only" or "tractor_only"
 
 ## SHAPEIT5 (Mandatory Arguments)
-shapeit5_input_vcf="/path/to/input_QC.vcf.gz"
-shapeit5_chunkfile="/path/to/chunks_chr${chr}.txt"
-shapeit5_genetic_map="/path/to/maps/b37/chr${chr}.b37.gmap.gz"
+shapeit5_input_vcf="/path/to/test_data/admixed_cohort/ASW.unphased.vcf.gz"
+shapeit5_chunkfile="/path/to/TractorWorkflow/resources/genomic_chunks/chunks_fullchromosome/chunks_chr${chr}.txt"
+shapeit5_genetic_map="/path/to/shapeit5/resources/maps/b37/chr${chr}.b37.gmap.gz"
 
 ## SHAPEIT5 (Optional Arguments)
 # shapeit5_ref_vcf=""
@@ -347,9 +347,9 @@ shapeit5_genetic_map="/path/to/maps/b37/chr${chr}.b37.gmap.gz"
 # NOTE: If you need additional (optional) arguments, add them in Step 5 as well.  
 
 ## RFMix2 (Mandatory Arguments)
-rfmix2_ref_vcf="/path/to/reference/reference_chr${chr}_phased.vcf.gz"
-rfmix2_sample_map="/path/to/reference/TGP_HGDP_2way_AFR_EUR.txt"
-rfmix2_genetic_map="/path/to/maps/b37/shapeit5_genetic_map_LAIformat1.txt"
+rfmix2_ref_vcf="/path/to/test_data/references/TGP_HGDP_QC_hg19_chr${chr}.vcf.gz"
+rfmix2_sample_map="/path/to/test_data/references/YRI_GBR_samplemap.txt"
+rfmix2_genetic_map="/path/to/TractorWorkflow/resources/genetic_maps/shapeit5_genetic_map_b37_LAIformat1.txt"
 
 ## RFMix2 (Optional Arguments)
 # rfmix2_reanalyze_ref=""
@@ -362,15 +362,15 @@ rfmix2_genetic_map="/path/to/maps/b37/shapeit5_genetic_map_LAIformat1.txt"
 ## GNomix (Mandatory Arguments)
 # gnomix_dir="/path/software/gnomix"
 # gnomix_config="${gnomix_dir}/config.yaml"
-# gnomix_ref_vcf="/path/reference/reference_chr${chr}_phased.vcf.gz"
-# gnomix_sample_map="/path/reference/TGP_HGDP_2way_AFR_EUR.txt"
-# gnomix_genetic_map="/path/maps/b37/shapeit5_genetic_map_LAIformat1.txt"
+# gnomix_ref_vcf="/path/to/test_data/references/TGP_HGDP_QC_hg19_chr${chr}.vcf.gz"
+# gnomix_sample_map="/path/to/test_data/references/YRI_GBR_samplemap.txt"
+# gnomix_genetic_map="/path/to/TractorWorkflow/resources/genetic_maps/shapeit5_genetic_map_b37_LAIformat1.txt"
 # gnomix_phase="false"
 
 ## FLARE (Mandatory Arguments)
 # flare_dir="/path/softwares/flare"
-# flare_ref_vcf="/path/reference/TGP_HGDP_QC_hg19_chr${chr}.vcf.gz"
-# flare_sample_map="/path/reference/YRI_GBR_samplemap.txt"
+# flare_ref_vcf="/path/to/test_data/references/TGP_HGDP_QC_hg19_chr${chr}.vcf.gz"
+# flare_sample_map="/path/to/test_data/references/YRI_GBR_samplemap.txt"
 # flare_genetic_map="/path/beagle_genetic_map_files/plink.chr${chr}.GRCh37.map"
 
 # FLARE (Optional Arguments)
@@ -395,13 +395,13 @@ extracts_num_ancs=2
 # extracts_compress=""
 
 ## Tractor (Mandatory Arguments)
-tractor_phenotype="/path/to/phenotype_files/pheno_irnt.txt"
-tractor_covarcollist="age,sex,PC1,PC2,PC3,PC4,PC5"
+tractor_phenotype="/path/to/test_data/phenotype/Phe_linear_covars_mod1.txt"
+tractor_covarcollist="age,sex"
 tractor_regression_method="linear"
 
 ## Tractor (one of the following arguments is Mandatory, unless "y" is used as phenocol bc that's default)
 # tractor_phenocol=""
-tractor_phenolist_file="/path/to/pheno_irnt_phenolist.txt"
+tractor_phenolist_file="/path/to/test_data/phenotype/Phe_linear_covars_mod1_phenolist.txt"
 
 ## Tractor (Optional Arguments)
 # tractor_sampleidcol=""
@@ -447,7 +447,7 @@ Note that the SLURM directives are used to launch the Tractor workflow, which in
 | `--partition=<ATTN: add-partition-name>`           | Specifies the partition or queue for job submission.                 |
 | `--job-name=launch_nxf_tractor`                    | Custom name for the job.                                             |
 | `--output=launch_nxf_tractor_%a_%j.out`            | File to store job logs, `%a`: array index (chr no.) and `%j`: job ID.|
-| `--array=1-22`                                     | Runs the job as an array i.e. 22 jobs are launched, with one task per chromosome (1–22).       |
+| `--array=1-22`                                     | Runs the job as an array i.e. 22 jobs are launched, with one task per chromosome (1–22).  |
 
 **Explanation of Nextflow directives**
 

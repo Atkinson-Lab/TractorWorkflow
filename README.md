@@ -130,13 +130,11 @@ Available in the **`resources/`** directory on this repository:
 2. **genetic_maps** – [SHAPEIT5 Genetic Map](https://github.com/odelaneau/shapeit5/tree/main/resources/maps) files reformatted for RFMix2/GNomix.
 3. **lai_reference_panels** – Optimized reference panels for local ancestry inference for 2-way(AFR–EUR and 3-way AFR–EUR–AMR individuals from the [TGP-HGDP joint-call dataset](https://genome.cshlp.org/content/34/5/796).
 
-<!-- ## Citation
+## Citation
 
 If you use this workflow, please cite:
+> Shah, N. N., Tan, T., Honorato-Mauer, J., Lin, Y.-S., Maihofer, A. X., Zai, C. C., Santoro, M., Nievergelt, C. M., & Atkinson, E. G. (2025). Tractor Workflow Pipeline: A Scalable Nextflow Framework for Local Ancestry-Aware Genome-Wide Association Studies. Cold Spring Harbor Laboratory. https://doi.org/10.1101/2025.09.02.673402
 
-```
-[Insert Tractor GWAS citation here]
-``` -->
 
 ## License
 

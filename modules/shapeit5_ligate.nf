@@ -26,17 +26,34 @@ process RUN_SHAPEIT5_LIGATE {
     """
     ls -1v *.bcf > list_ligate.${chr}.txt
 
-    ligate_static \\
-    --input list_ligate.${chr}.txt \\
-    --output ${output_prefix}_${chr}.shapeit5_common_ligate.vcf.gz \\
-    --thread ${task.cpus} \\
-    --index \\
-    --log ${output_prefix}_${chr}.shapeit5_common_ligate.log
+    if command -v SHAPEIT5_ligate &> /dev/null; then
+        SHAPEIT5_ligate \\
+        --input list_ligate.${chr}.txt \\
+        --output ${output_prefix}_${chr}.shapeit5_common_ligate.vcf.gz \\
+        --thread ${task.cpus} \\
+        --log ${output_prefix}_${chr}.shapeit5_common_ligate.log
+        bcftools index ${output_prefix}_${chr}.shapeit5_common_ligate.vcf.gz
+
+    else
+        ligate_static \\
+        --input list_ligate.${chr}.txt \\
+        --output ${output_prefix}_${chr}.shapeit5_common_ligate.vcf.gz \\
+        --thread ${task.cpus} \\
+        --index \\
+        --log ${output_prefix}_${chr}.shapeit5_common_ligate.log
+    fi
     """
 
     stub:
     """
     ls -1v *.bcf > list_ligate.${chr}.txt
+
+    echo "SHAPEIT5_ligate \\    
+    --input list_ligate.${chr}.txt \\
+    --output ${output_prefix}_${chr}.shapeit5_common_ligate.vcf.gz \\
+    --thread ${task.cpus} \\
+    --log ${output_prefix}_${chr}.shapeit5_common_ligate.log
+    bcftools index ${output_prefix}_${chr}.shapeit5_common_ligate.vcf.gz"
 
     echo "ligate_static \\
     --input list_ligate.${chr}.txt \\

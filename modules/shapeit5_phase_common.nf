@@ -32,15 +32,27 @@ process RUN_SHAPEIT5_PHASE_COMMON {
     """
     echo "# Running SHAPEIT5 Phasing..."
 
-    phase_common_static \\
-    --input ${input_vcf} \\
-    ${ref_vcf_command} \\
-    --map ${genetic_map} \\
-    --output ${output_prefix}_${chr}.chunk_${data[0]}.shapeit5_common.bcf \\
-    --thread ${task.cpus} \\
-    --log ${output_prefix}_${chr}.chunk_${data[0]}.shapeit5_common.log \\
-    ${filter_maf_command} \\
-    --region ${data[1]}
+    if command -v SHAPEIT5_phase_common &> /dev/null; then
+        SHAPEIT5_phase_common \
+        --input ${input_vcf} \
+        ${ref_vcf_command} \
+        --map ${genetic_map} \
+        --output ${output_prefix}_${chr}.chunk_${data[0]}.shapeit5_common.bcf \
+        --thread ${task.cpus} \
+        --log ${output_prefix}_${chr}.chunk_${data[0]}.shapeit5_common.log \
+        ${filter_maf_command} \
+        --region ${data[1]}
+    else
+        phase_common_static \
+        --input ${input_vcf} \
+        ${ref_vcf_command} \
+        --map ${genetic_map} \
+        --output ${output_prefix}_${chr}.chunk_${data[0]}.shapeit5_common.bcf \
+        --thread ${task.cpus} \
+        --log ${output_prefix}_${chr}.chunk_${data[0]}.shapeit5_common.log \
+        ${filter_maf_command} \
+        --region ${data[1]}
+    fi
 
     """
     stub:
@@ -49,9 +61,19 @@ process RUN_SHAPEIT5_PHASE_COMMON {
     """
     echo "# Running SHAPEIT5 Phasing..."
 
-    echo "phase_common_static \\
+    echo "SHAPEIT5_phase_common \\
     --input ${input_vcf} \\
     $ref_vcf_command \\
+    --map ${genetic_map} \\
+    --output ${output_prefix}_${chr}.chunk_${data[0]}.shapeit5_common.bcf \\
+    --thread ${task.cpus} \\
+    --log ${output_prefix}_${chr}.chunk_${data[0]}.shapeit5_common.log \\
+    ${filter_maf_command} \\
+    --region ${data[1]}"
+
+    echo "phase_common_static \\
+    --input ${input_vcf} \\
+    ${ref_vcf_command} \\
     --map ${genetic_map} \\
     --output ${output_prefix}_${chr}.chunk_${data[0]}.shapeit5_common.bcf \\
     --thread ${task.cpus} \\

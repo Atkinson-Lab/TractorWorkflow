@@ -106,6 +106,7 @@ nextflow run workflows/main.nf \
     --phenotype test_data/phenotype/Phe_linear_covars_mod1.txt \
     --phenolist_file test_data/phenotype/Phe_linear_covars_mod1_phenolist.txt \
     --covarcollist "age,sex" \
+    --sampleidcol renamed_sampleid \
     --regression_method "linear"
 ```
 

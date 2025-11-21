@@ -263,7 +263,7 @@ if (params.mode == "complete" || params.mode == "phasing_lai" || params.mode == 
         log.info """\
             ==>   FLARE-specific inputs
             FLARE directory       : ${params.flare_dir}
-            FLARE Ref. VCF        : ${params.lai_ref_vcf}
+            FLARE Ref. VCF        : ${lai_ref_vcf}
             FLARE Ref. VCF index  : ${lai_ref_vcf_idx}
             Sample Map File       : ${params.flare_sample_map}
             FLARE Genetic Map     : ${params.flare_genetic_map}

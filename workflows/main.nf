@@ -585,7 +585,6 @@ workflow {
                         params.totallines)
             
         } else {
-            println("RUN_TRACTOR: Processing NON phenolist_file arg")
             RUN_TRACTOR(params.output_prefix,
                         ch_HAPDOS,
                         params.phenotype,

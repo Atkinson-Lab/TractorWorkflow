@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+title: TractorWorkflow
+version: 2.6.0
+message: "If you use this software, please cite the references below."
+license: MIT
+repository-code: "https://github.com/Atkinson-Lab/TractorWorkflow"
+authors:
+  - family-names: Shah
+    given-names: Nirav N.
+  - family-names: Atkinson
+    given-names: Elizabeth G.
+preferred-citation:
+  type: article
+  title: "Tractor workflow: a scalable Nextflow framework for local ancestry-aware genome-wide association studies"
+  authors:
+    - family-names: Shah
+      given-names: Nirav N.
+    - family-names: Tan
+      given-names: Taotao
+    - family-names: Honorato-Mauer
+      given-names: Jessica
+    - family-names: Lin
+      given-names: Yi-Sian
+    - family-names: Maihofer
+      given-names: Adam X.
+    - family-names: Zai
+      given-names: Clement C.
+    - name: "PGC-PTSD ancestry working group"
+    - family-names: Santoro
+      given-names: Marcos
+    - family-names: Nievergelt
+      given-names: Caroline M.
+    - family-names: Atkinson
+      given-names: Elizabeth G.
+  journal: "Bioinformatics"
+  volume: 42
+  issue: 5
+  pages: btag124
+  year: 2026
+  month: 5
+  doi: 10.1093/bioinformatics/btag124
+

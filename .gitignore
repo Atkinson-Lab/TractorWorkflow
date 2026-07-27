@@ -1,0 +1,7 @@
+# macOS files
+**/.DS_Store
+
+# build files
+docs/_site/
+docs/.jekyll-cache/
+
